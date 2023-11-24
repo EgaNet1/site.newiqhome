@@ -1,0 +1,352 @@
+body {
+    font-family: 'Comfortaa', sans-serif;
+    background-color: #fff;
+    padding-top: 100px;
+    color: #000;
+}
+
+.background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    min-width: 100%;
+    min-height: 100%;
+    background-size: cover;
+    z-index: -1;
+}
+
+.pixel-art {
+    position: relative;
+    z-index: 1;
+    width: 80%;
+    margin: auto;
+    border: 1px solid #fff;
+    border-radius: 10px;
+    padding: 20px;
+    box-sizing: border-box;
+    background: rgba(0, 0, 0, 0.5);
+    color: #f1f1f1;
+}
+
+nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: rgba(255, 255, 255, 0.375);
+    backdrop-filter: blur(15px);
+    z-index: 999;
+}
+
+nav ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+    list-style: none;
+    padding: 10px 20px;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 10px;
+}
+
+nav ul li a {
+    display: inline-block;
+    padding: 10px 20px;
+    text-decoration: none;
+    color: #333;
+    border: 1px solid #333;
+    border-radius: 10px;
+    text-align: center;
+    transition: background-color 0.5s ease;
+}
+
+nav ul li a:hover {
+    background-color: #000;
+    color: #fff;
+}
+
+.logo-container {
+    position: fixed;
+    top: 0px;
+    left: 5%;
+    transform: translateX(-50%);
+    z-index: 1000;
+}
+
+.logo-container img {
+    height: 80px; 
+}
+.products-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr); /* создает 5 колонок */
+    grid-auto-rows: minmax(100px, auto); /* минимальная высота ряда */
+    grid-gap: 10px; /* отступы между карточками */
+}
+.product-card {
+    border: 1px solid #000;
+    border-radius: 10px;
+    margin: 10px;
+    padding: 10px;
+    width: 200px;
+    height: 300px;
+    box-sizing: border-box;
+    background-color: #fff; 
+    color: #000;
+    
+}
+
+.product-image img {
+    width: 76%; 
+    height: auto; 
+    border-radius: 10px; 
+    display: block;
+    margin: 0 auto;
+}
+
+.product-name {
+    font-size: 20px;
+    margin-top: 10px;
+}
+
+
+
+
+/* ТЕСТ!!!!!!!1 */
+.blog-section {
+    margin: 50px auto;
+    text-align: center;
+    text-decoration: none;
+}
+
+.blog-grid {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    gap: 20px;
+}
+
+.blog-item {
+    background: #ffffff;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+
+}
+
+.blog-item img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+.blog-item h3 {
+    font-size: 1.5em;
+    color: #333;
+    margin-top: 15px;
+}
+
+.blog-item p {
+    font-size: 1em;
+    color: #666;
+}
+
+.blog-item:hover {
+    transform: translateY(-5px);
+}
+a {
+    text-decoration: none;
+}
+
+.blog-grid2 {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    gap: 20px;
+}
+.blog-item2 {
+    background: #ffffff;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+
+}
+
+.blog-item2 img {
+    width: 80%;
+    height: auto;
+    border-radius: 10px;
+}
+.blog-item2 h3 {
+    font-size: 1.5em;
+    color: #333;
+    margin-top: 15px;
+}
+
+.blog-item2 p {
+    font-size: 1em;
+    color: #666;
+}
+
+.blog-item2:hover {
+    transform: translateY(-5px);
+}
+a {
+    text-decoration: none;
+}
+
+/*кнопка в блоге*/
+
+.product-link {
+    display: inline-block; /* Элемент ведет себя как блочный и может центрироваться */
+    padding: 10px 15px; /* Внутренние отступы */
+    background: rgba(0, 0, 0, 0.5); /* Полупрозрачный черный фон */
+    color: #f1f1f1; /* Цвет текста */
+    text-decoration: none; /* Убирает подчеркивание текста */
+    border: 1px solid #fff; /* Белая рамка */
+    border-radius: 10px; /* Скругленные углы */
+    margin-top: 20px; /* Отступ сверху */
+    transition: background-color 0.3s ease; /* Плавное изменение фона при наведении */
+}
+
+.product-link:hover {
+    background-color: rgba(255, 255, 255, 0.2); /* Светлее при наведении */
+}
+
+/*Бегущая строка*/
+.marquee {
+    overflow: hidden;
+    position: relative;
+    
+}
+
+.marquee-content {
+    display: flex;
+    animation: marquee 60s linear infinite; /* Продолжительность анимации зависит от количества карточек */
+}
+
+.product-card2 {
+    display: flex; /* Делаем карточку flex контейнером */
+    align-items: center; /* Центрируем элементы по вертикали */
+    border: 1px solid #fff;
+    border-radius: 10px; /* Закругленные углы */
+    padding: 10px;
+    background: #ffffff9b; /* Полупрозрачный белый фон карточки */
+    margin-right: 20px; /* Отступ между карточками */
+    width: 230px;
+    text-decoration: none;
+    color: inherit;
+    transition: background-color 0.3s ease; /* Устанавливаем фиксированную ширину карточки */
+}
+.product-card2:hover {
+    background: #5353538b; /* Фон карточки при наведении */
+    cursor: pointer; /* Изменение курсора, указывающее на кликабельность */
+    transform: translateY(-3px);
+    background-color: rgba(255, 255, 255, 0.2);
+}
+.product-card2 img {
+    width: 50%; /* Изображение теперь будет занимать половину ширины карточки */
+    border-radius: 10px 0 0 10px; /* Закругляем только левые углы */
+}
+
+.product-info2 {
+    padding-left: 5px; /* Добавляем отступ слева от изображения */
+}
+
+
+
+  /* Анимация для бегущей строки */
+@keyframes marquee {
+    0% { transform: translateX(0%); }
+    100% { transform: translateX(-100%); } /* Перемещение на ширину содержимого */
+}
+/*МОБИЛКИ*/
+/* Базовые стили, применяемые для всех устройств */
+
+/* ... Ваши обычные стили ... */
+
+/* Стили для десктопов */
+/* ... Ваши обычные стили ... */
+
+/* Стили для планшетов */
+@media (max-width: 1024px) {
+    .products-grid {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Адаптируем количество колонок под размер экрана */
+    }
+}
+
+/* Стили для мобильных устройств */
+@media (max-width: 768px) {
+    .products-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .product-card {
+        width: auto;
+        margin: 10px;
+    }
+
+    .product-image img {
+        max-width: 100%; 
+        height: auto;
+    }
+
+
+    body, .pixel-art {
+        padding: 10px;
+    }
+
+
+    nav ul {
+        flex-direction: column;
+        padding: 0;
+    }
+
+    nav ul li {
+        margin: 5px 0; 
+    }
+}
+
+
+@media (max-width: 480px) {
+    
+}
+
+/*ТЕСТ*/
+.product-container2 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 50px;
+}
+
+.product-details2 {
+    flex: 1;
+    margin-right: 20px; 
+}
+
+.product-gallery2 {
+    flex: 1;
+    text-align: right; 
+}
+
+.product-image2 {
+    max-width: 70%;
+    height: auto;
+    border-radius: 10px;
+}
+
+@media (max-width: 768px) {
+    .product-container2 {
+        flex-direction: column-reverse;
+    }
+
+    .product-gallery2 {
+        text-align: center;
+        margin-bottom: 20px;
+    }
+}
+
